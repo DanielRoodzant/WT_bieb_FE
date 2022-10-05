@@ -29,3 +29,20 @@ function registerUser() {
         alert('Could not register user. Please check input.');
     });
 }
+
+function deleteUser() {
+    // Formulier uitlezen
+    let userIdInvoer = document.getElementById('userId').value;
+
+
+    fetch("http://localhost:8080/delete/"+userIdInvoer, {
+        method: 'DELETE'
+        
+    })
+    .then(response => {
+        alert('User deleted');
+    })
+    .catch(error => {
+        alert('Could not delete user. Please check input.');
+    });
+}
