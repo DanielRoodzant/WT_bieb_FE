@@ -15,7 +15,7 @@ function registerUser() {
         admin: adminInvoer
     }
 
-    fetch("http://localhost:8080/register", {
+    fetch("http://localhost:8080/user/register", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -35,7 +35,7 @@ function deleteUser() {
     let userIdInvoer = document.getElementById('userId').value;
 
 
-    fetch("http://localhost:8080/delete/"+userIdInvoer, {
+    fetch("http://localhost:8080/user/delete/"+userIdInvoer, {
         method: 'DELETE'
         
     })
