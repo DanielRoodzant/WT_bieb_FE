@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="users.js"></script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Users</title>
+    </head>
+    <body>
+        <h1>Register user:</h1>
+
+        <form>
+
+            <label>Voornaam</label>
+            <input type="text" name="firstName" id="firstName" />
+            <br>
+
+            <label>Achternaam</label>
+            <input type="text" name="lastName" id="lastName" />
+            <br>
+
+            <label>Email adres</label>
+            <input type="text" name="email" id="email" />
+            <br>
+
+            <label>Wachtwoord</label>
+            <input type="text" name="password" id="password" />
+            <br>
+
+            <label>Is user een admin?</label>
+            <input type="checkbox" name="admin" id="admin" />
+            <br>
+
+            <button type="button" onclick="registerUser()">Opslaan</button>
+
+        </form>
+    </body>
+</html>
