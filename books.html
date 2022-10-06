@@ -7,20 +7,24 @@
         <title>Books</title>
     </head>
     <body>
+        <h1>Books:</h1>
+
+        <table id="books"></table>
+
         <h1>Register book:</h1>
 
         <form>
 
             <label>Title</label>
-            <input type="text" name="title" id="title" />
+            <input type="text" name="titleReg" id="titleReg" />
             <br>
 
             <label>Author</label>
-            <input type="text" name="author" id="author" />
+            <input type="text" name="authorReg" id="authorReg" />
             <br>
 
             <label>ISBN</label>
-            <input type="number" name="isbn" id="isbn" />
+            <input type="number" name="isbnReg" id="isbnReg" />
             <br>
 
 
@@ -28,5 +32,40 @@
 
         </form>
 
+        <h1>Update book:</h1>
+
+        <form>
+
+            <label>Book ID</label>
+            <input type="text" name="bookIdUpd" id="bookIdUpd" />
+            <br>
+
+            <label>Title</label>
+            <input type="text" name="titleUpd" id="titleUpd" />
+            <br>
+
+            <label>Author</label>
+            <input type="text" name="authorUpd" id="authorUpd" />
+            <br>
+
+            <label>ISBN</label>
+            <input type="number" name="isbnUpd" id="isbnUpd" />
+            <br>
+
+
+            <button type="button" onclick="updateBook()">Opslaan</button>
+
+        </form>
+
+        <h1>Delete book:</h1>
+        <form>
+
+            <label>Book ID</label>
+            <input type="text" name="bookIdDel" id="bookIdDel" />
+            <br>
+
+            <button type="button" onclick="deleteBook()">Verwijderen</button>
+
+        </form>
     </body>
 </html>

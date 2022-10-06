@@ -7,31 +7,62 @@
         <title>Users</title>
     </head>
     <body>
+        <h1>Users:</h1>
+
+        <table id="users"></table>
+
         <h1>Register user:</h1>
 
         <form>
 
             <label>Voornaam</label>
-            <input type="text" name="firstName" id="firstName" />
-            <br>
+            <input type="text" name="firstNameReg" id="firstNameReg" />
 
             <label>Achternaam</label>
-            <input type="text" name="lastName" id="lastName" />
+            <input type="text" name="lastNameReg" id="lastNameReg" />
             <br>
 
             <label>Email adres</label>
-            <input type="text" name="email" id="email" />
-            <br>
+            <input type="text" name="emailReg" id="emailReg" />
 
             <label>Wachtwoord</label>
-            <input type="text" name="password" id="password" />
+            <input type="text" name="passwordReg" id="passwordReg" />
             <br>
 
             <label>Is user een admin?</label>
-            <input type="checkbox" name="admin" id="admin" />
+            <input type="checkbox" name="adminReg" id="adminReg" />
             <br>
 
             <button type="button" onclick="registerUser()">Opslaan</button>
+
+        </form>
+
+        <h1>Change user:</h1>
+
+        <form>
+            <label>User ID</label>
+            <input type="text" name="userIdCha" id="userIdCha" />
+            <br>
+
+            <label>Voornaam</label>
+            <input type="text" name="firstNameCha" id="firstNameCha" />
+
+            <label>Achternaam</label>
+            <input type="text" name="lastNameCha" id="lastNameCha" />
+            <br>
+
+            <label>Email adres</label>
+            <input type="text" name="emailCha" id="emailCha" />
+
+            <label>Wachtwoord</label>
+            <input type="text" name="passwordCha" id="passwordCha" />
+            <br>
+
+            <label>Is user een admin?</label>
+            <input type="checkbox" name="adminCha" id="adminCha" />
+            <br>
+
+            <button type="button" onclick="changeUser()">Opslaan</button>
 
         </form>
 
@@ -39,12 +70,11 @@
         <form>
 
             <label>User ID</label>
-            <input type="text" name="userId" id="userId" />
+            <input type="text" name="userIdDel" id="userIdDel" />
             <br>
 
             <button type="button" onclick="deleteUser()">Verwijderen</button>
 
         </form>
-
     </body>
 </html>
