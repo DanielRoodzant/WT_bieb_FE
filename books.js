@@ -77,6 +77,7 @@ function show(data) {
                 <th>Titel</th>
                 <th>Auteur</th>
                 <th>ISBN</th>
+                <th>Archived</th>
              </tr>`;
 
     // Loop to access all rows 
@@ -86,6 +87,7 @@ function show(data) {
                 <td>${r.title}</td>
                 <td>${r.author}</td>
                 <td>${r.isbn}</td>
+                <td>${r.archived}</td>
             </tr>`;
     }
 
@@ -107,3 +109,26 @@ function getapi() {
 }
 
 getapi();
+
+function archiveBooks() {
+    let changeUserIdInvoer = document.getElementById('bookIdArch').value;
+    //let archivedInvoer = document.getElementById('archiveBook').checked;
+
+   // let changeUserInfo = {
+  //      archived: archivedInvoer
+   // }
+
+    fetch("http://localhost:8080/book/archive/"+changeUserIdInvoer, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        }//,
+        //body: JSON.stringify(changeUserInfo)
+    })
+    .then(response => {
+        alert('Book archived');
+    })
+    .catch(error => {
+        alert('Could not archive book. Please check input.');
+    });
+}

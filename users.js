@@ -52,14 +52,12 @@ function changeUser() {
     let lastNameInvoer = document.getElementById('lastNameCha').value;
     let emailInvoer = document.getElementById('emailCha').value;
     let passwordInvoer = document.getElementById('passwordCha').value;
-    let adminInvoer = document.getElementById('adminCha').checked;
 
     let changeUserInfo = {
         firstName: firstNameInvoer,
         lastName: lastNameInvoer,
         email: emailInvoer,
         password: passwordInvoer,
-        admin: adminInvoer
     }
 
     fetch("http://localhost:8080/user/update/"+changeUserIdInvoer, {
@@ -118,3 +116,28 @@ function getapi() {
 }
 
 getapi();
+
+function anonymizeUser() {
+    let changeUserIdInvoer = document.getElementById('userIdDel').value;
+
+    let changeUserInfo = {
+        firstName: "Deleted",
+        lastName: "User",
+        email: "None",
+        password: "None",
+    }
+
+    fetch("http://localhost:8080/user/update/"+changeUserIdInvoer, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(changeUserInfo)
+    })
+    .then(response => {
+        alert('User deleted');
+    })
+    .catch(error => {
+        alert('Could not delete user. Please check input.');
+    });
+}

@@ -57,14 +57,18 @@
 
         </form>
 
-        <h1>Delete book:</h1>
+        <h1>Archive book:</h1>
         <form>
 
             <label>Book ID</label>
-            <input type="text" name="bookIdDel" id="bookIdDel" />
+            <input type="text" name="bookIdArch" id="bookIdArch" />
             <br>
 
-            <button type="button" onclick="deleteBook()">Verwijderen</button>
+          <!--  <label>Check to archive, leave unchecked to unarchive</label>
+            <input type="checkbox" name="archiveBook" id="archiveBook" />
+            <br> -->
+
+            <button type="button" onclick="archiveBooks()">Archiveren</button>
 
         </form>
     </body>
