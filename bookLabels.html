@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="bookLabels.js"></script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BookLabels</title>
+    </head>
+    <body>
+        <h1>Book labels:</h1>
+
+        <table id="bookLabels"></table>
+
+        <h1>Register book labels:</h1>
+
+        <form>
+
+            <label>Name</label>
+            <input type="text" name="nameReg" id="nameReg" />
+            <br>
+
+            <button type="button" onclick="registerBookLabel()">Opslaan</button>
+
+        </form>
+
+        <h1>Update book label:</h1>
+
+        <form>
+
+            <label>Book label ID</label>
+            <input type="text" name="bookLabelIdUpd" id="bookLabelIdUpd" />
+            <br>
+
+            <label>Name</label>
+            <input type="text" name="nameUpd" id="nameUpd" />
+            <br>
+
+            <button type="button" onclick="updateBookLabel()">Opslaan</button>
+
+        </form>
+
+        <h1>Delete book label:</h1>
+
+        <form>
+
+            <label>Book label ID</label>
+            <input type="text" name="bookLabelIdDel" id="bookLabelIdDel" />
+            <br>
+
+            <button type="button" onclick="deleteBookLabel()">Opslaan</button>
+
+        </form>
+    </body>
+</html>
