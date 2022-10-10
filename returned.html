@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="Returned.js"></script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Returneds</title>
+    </head>
+    <body>
+        <h1>Actieve uitleningen:</h1>
+
+        <table id="Returneds"></table>
+
+        <h1>Register Returned:</h1>
+
+        <form>
+
+            <label>ReturnedId</label>
+            <input type="number" name="ReturnedIdReg" id="ReturnedIdReg" />
+            <br>
+            
+            <label>UserId</label>
+            <input type="number" name="UserIdReg" id="UserIdReg" />
+            <br>
+
+            <label>BookId</label>
+            <input type="number" name="bookIdReg" id="bookIdReg" />
+            <br>
+
+            <label>Copy</label>
+            <input type="number" name="copyReg" id="copyReg" />
+            <br>
+
+            <label>Datum</label>
+            <input type="string" name="dateReg" id="dateReg" />
+            <br>
+
+
+            <button type="button" onclick="registerReturned()">Opslaan</button>
+
+        </form>
+
+        <h1>Update Returned:</h1>
+
+        <form>
+
+            <label>Returned ID</label>
+            <input type="text" name="ReturnedIdUpd" id="ReturnedIdUpd" />
+            <br>
+
+            <label>Title</label>
+            <input type="text" name="titleUpd" id="titleUpd" />
+            <br>
+
+            <label>Author</label>
+            <input type="text" name="authorUpd" id="authorUpd" />
+            <br>
+
+            <label>ISBN</label>
+            <input type="number" name="isbnUpd" id="isbnUpd" />
+            <br>
+
+
+            <button type="button" onclick="updateReturned()">Opslaan</button>
+
+        </form>
+
+        <h1>Archive Returned:</h1>
+        <form>
+
+            <label>Returned ID</label>
+            <input type="text" name="ReturnedIdArch" id="ReturnedIdArch" />
+            <br>
+
+          <!--  <label>Check to archive, leave unchecked to unarchive</label>
+            <input type="checkbox" name="archiveReturned" id="archiveReturned" />
+            <br> -->
+
+            <button type="button" onclick="archiveReturneds()">Archiveren</button>
+
+        </form>
+    </body>
+</html>

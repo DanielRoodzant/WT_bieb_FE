@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="lent.js"></script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lents</title>
+    </head>
+    <body>
+        <h1>Actieve uitleningen:</h1>
+
+        <table id="lents"></table>
+
+        <h1>Register lent:</h1>
+
+        <form>
+
+            <label>LentId</label>
+            <input type="number" name="LentIdReg" id="LentIdReg" />
+            <br>
+            
+            <label>UserId</label>
+            <input type="number" name="UserIdReg" id="UserIdReg" />
+            <br>
+
+            <label>BookId</label>
+            <input type="number" name="bookIdReg" id="bookIdReg" />
+            <br>
+
+            <label>Copy</label>
+            <input type="number" name="copyReg" id="copyReg" />
+            <br>
+
+            <label>Datum</label>
+            <input type="string" name="dateReg" id="dateReg" />
+            <br>
+
+
+            <button type="button" onclick="registerLent()">Opslaan</button>
+
+        </form>
+
+        <h1>Update lent:</h1>
+
+        <form>
+
+            <label>Lent ID</label>
+            <input type="text" name="lentIdUpd" id="lentIdUpd" />
+            <br>
+
+            <label>Title</label>
+            <input type="text" name="titleUpd" id="titleUpd" />
+            <br>
+
+            <label>Author</label>
+            <input type="text" name="authorUpd" id="authorUpd" />
+            <br>
+
+            <label>ISBN</label>
+            <input type="number" name="isbnUpd" id="isbnUpd" />
+            <br>
+
+
+            <button type="button" onclick="updateLent()">Opslaan</button>
+
+        </form>
+
+        <h1>Archive lent:</h1>
+        <form>
+
+            <label>Lent ID</label>
+            <input type="text" name="lentIdArch" id="lentIdArch" />
+            <br>
+
+          <!--  <label>Check to archive, leave unchecked to unarchive</label>
+            <input type="checkbox" name="archiveLent" id="archiveLent" />
+            <br> -->
+
+            <button type="button" onclick="archiveLents()">Archiveren</button>
+
+        </form>
+    </body>
+</html>
