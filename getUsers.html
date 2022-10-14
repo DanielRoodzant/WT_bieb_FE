@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="getUsers.js"></script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Get user</title>
+    </head>
+    <body>
+        <h1>Zoek user:</h1>
+
+        <form>
+            <label>User id</label>
+            <input type="text" name="userIdGet" id="userIdGet" />
+
+            <button type="button" onclick="getUserData()">Zoek</button>
+        </form>
+        <br>
+
+        <h2> Gegevens:</h2>
+
+        <table id="userData"></table>
+        <br>
+
+        <form>
+            <label>Voornaam:</label>
+            <p id="firstName"> </p> 
+
+            <label>Achternaam:</label>
+            <p id="lastName"> </p>
+
+            <label>Email gebruiker:</label>
+            <p id="email"> </p>
+
+            <label>Wachtwoord gebruiker:</label>
+            <p id="firstName"> </p>
+
+        </form>
+
+    </body>
+</html>
