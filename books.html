@@ -5,6 +5,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Books</title>
+        <link rel="stylesheet" href="books.css">
     </head>
     <body>
         <h1>Books:</h1>
@@ -71,5 +72,26 @@
             <button type="button" onclick="archiveBooks()">Archiveren</button>
 
         </form>
+
+        <br>
+        <br>
+        <title>Search Bar</title>
+
+        <div class="form-container">
+            <form class="form">
+                <input id="search" type="text" class="input" placeholder="search..."/>
+                <button id="clear" class="clear-results">clear</button>
+            </form>
+
+  </div>
+  <div class="results-container>
+     <ul class="results-list" id="list">
+
+     </ul>
+  </div>
+
+     <script src="books.js"></script>
+
+
     </body>
 </html>
