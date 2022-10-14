@@ -15,26 +15,21 @@
 
         <form>
 
-            <label>LentId</label>
+            <label>Lent Id:</label>
             <input type="number" name="LentIdReg" id="LentIdReg" />
             <br>
             
-            <label>UserId</label>
+            <label>User Id:</label>
             <input type="number" name="UserIdReg" id="UserIdReg" />
             <br>
 
-            <label>BookId</label>
+            <label>Copy Id:</label>
             <input type="number" name="bookIdReg" id="bookIdReg" />
             <br>
 
-            <label>Copy</label>
-            <input type="number" name="copyReg" id="copyReg" />
-            <br>
-
-            <label>Datum</label>
+            <label>Datum:</label>
             <input type="string" name="dateReg" id="dateReg" />
             <br>
-
 
             <button type="button" onclick="registerLent()">Opslaan</button>
 
@@ -44,20 +39,20 @@
 
         <form>
 
-            <label>Lent ID</label>
+            <label>Lent ID:</label>
             <input type="text" name="lentIdUpd" id="lentIdUpd" />
             <br>
 
-            <label>Title</label>
-            <input type="text" name="titleUpd" id="titleUpd" />
+            <label>User ID:</label>
+            <input type="text" name="userIdUpd" id="userIdUpd" />
             <br>
 
-            <label>Author</label>
-            <input type="text" name="authorUpd" id="authorUpd" />
+            <label>Copy ID:</label>
+            <input type="text" name="copyIdUpd" id="copyIdUpd" />
             <br>
 
-            <label>ISBN</label>
-            <input type="number" name="isbnUpd" id="isbnUpd" />
+            <label>Datum:</label>
+            <input type="number" name="dateUpd" id="dateUpd" />
             <br>
 
 
@@ -65,19 +60,5 @@
 
         </form>
 
-        <h1>Archive lent:</h1>
-        <form>
-
-            <label>Lent ID</label>
-            <input type="text" name="lentIdArch" id="lentIdArch" />
-            <br>
-
-          <!--  <label>Check to archive, leave unchecked to unarchive</label>
-            <input type="checkbox" name="archiveLent" id="archiveLent" />
-            <br> -->
-
-            <button type="button" onclick="archiveLents()">Archiveren</button>
-
-        </form>
     </body>
 </html>

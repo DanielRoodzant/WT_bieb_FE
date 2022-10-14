@@ -115,8 +115,6 @@ function getapi() {
         });
 }
 
-getapi();
-
 function anonymizeUser() {
     let changeUserIdInvoer = document.getElementById('userIdDel').value;
 
