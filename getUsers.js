@@ -4,29 +4,6 @@ function showUser(data) {
     document.getElementById("email").innerHTML = data.email;
     document.getElementById("password").innerHTML = data.password;
     document.getElementById("admin").innerHTML = data.admin;
-
-    let userTableHtml =
-        `<tr>
-                <th>ID</th>
-                <th>Firstname</th>
-                <th>Lastname</th>
-                <th>Email</th>
-                <th>Password</th>
-                <th>Admin?</th>
-             </tr>`;
-
-    // Fill columns
-        userTableHtml += `<tr> 
-                <td>${data.userId} </td>
-                <td>${data.firstName}</td>
-                <td>${data.lastName}</td>
-                <td>${data.email}</td>
-                <td>${data.password}</td>
-                <td>${data.admin}</td>
-            </tr>`;
-
-    // Setting innerHTML as tab variable
-    document.getElementById("userData").innerHTML = userTableHtml;
 }
 
 function getUserData() {
@@ -43,3 +20,39 @@ let userIdInvoer = document.getElementById('userIdGet').value;
             // handle the error
         });
 }
+
+function showLent(data) {
+    let lentTableHtml =
+        `<tr>
+                <th>lentId</th>
+                <th>userId</th>
+                <th>copyId</th>
+                <th>date</th>
+             </tr>`;
+
+    lentTableHtml += `<tr> 
+            <td>${data.lentId} </td>
+            <td>${data.userId}</td>
+            <td>${data.copyId}</td>
+            <td>${data.date}</td>
+        </tr>`;
+
+    // Setting innerHTML as tab variable
+    document.getElementById("lents").innerHTML = lentTableHtml;
+}
+
+function getLentData() {
+    let lentIdInvoer = document.getElementById('userIdGet').value;
+    
+        fetch("http://localhost:8080/lent/user/"+lentIdInvoer)
+            .then(response => response.json())
+            .then(a => {
+                console.log('response', a);
+                showLent(a);
+            })
+            .catch(error => {
+                console.log('error', error);
+                // handle the error
+            });
+    }
+

@@ -4,7 +4,20 @@
         <script src="getUsers.js"></script>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Get user</title>
+        <style>
+            .left {
+                padding: 20px;
+                float: left;
+                width: 20%;
+            }
+
+            .right {
+                padding: 20px;
+                float: left;
+                width: 40%;
+            }
+        </style>
+        <title>Zoek user</title>
     </head>
     <body>
         <h1>Zoek user:</h1>
@@ -13,29 +26,37 @@
             <label>User id</label>
             <input type="text" name="userIdGet" id="userIdGet" />
 
-            <button type="button" onclick="getUserData()">Zoek</button>
+            <button type="button" onclick="getUserData(), getLentData()">Zoek</button>
         </form>
         <br>
 
         <h2> Gegevens:</h2>
 
-        <table id="userData"></table>
-        <br>
+        <section class="left">
+            <p><b>Voornaam:</b></p>
 
-        <form>
-            <label>Voornaam:</label>
-            <p id="firstName"> </p> 
+            <p><b>Achternaam:</b></p>
 
-            <label>Achternaam:</label>
-            <p id="lastName"> </p>
+            <p><b>Email gebruiker:</b></p>
 
-            <label>Email gebruiker:</label>
-            <p id="email"> </p>
+            <p><b>Wachtwoord gebruiker:</b></p>
 
-            <label>Wachtwoord gebruiker:</label>
-            <p id="firstName"> </p>
+            <p><b>Heeft user adminrechten?</b></p>
 
-        </form>
+        </section>
+        <section class="right">
+            <p id="firstName" ></p>
+            <p id="lastName"></p>
+            <p id="email"></p>
+            <p id="password"></p>
+            <p id="admin"></p>
+        </section>
+
+        <h2>Boeken in bezit:</h2>
+
+        <table id="lents"></table>
+
+        <p id="lents">lent</p>
 
     </body>
 </html>
