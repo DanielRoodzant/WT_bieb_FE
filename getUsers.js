@@ -30,12 +30,15 @@ function showLent(data) {
                 <th>date</th>
              </tr>`;
 
+    // Loop to access all rows 
+for (let r of data) {
     lentTableHtml += `<tr> 
-            <td>${data.lentId} </td>
-            <td>${data.userId}</td>
-            <td>${data.copyId}</td>
-            <td>${data.date}</td>
+            <td>${r.lentId} </td>
+            <td>${r.userId}</td>
+            <td>${r.lentIdcopy}</td>
+            <td>${r.date}</td>
         </tr>`;
+}
 
     // Setting innerHTML as tab variable
     document.getElementById("lents").innerHTML = lentTableHtml;
