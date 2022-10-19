@@ -133,3 +133,26 @@ function archiveBooks() {
     });
 }
 
+function booksearch() {
+    // Zoek veld uitlezen
+    let zoektermWaarde = document.getElementById('searchbooktitle').value;
+
+    let dto = {
+        zoekterm: zoektermWaarde,
+    }
+
+    fetch("http://localhost:8080/book/search", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(dto)
+    })
+    .then(response => response.json())
+    .then(books => {
+        show(books);
+    })
+    .catch(error => {
+        alert('Coudl not search books.');
+    });
+}
