@@ -133,3 +133,28 @@ function archiveBooks() {
     });
 }
 
+function searchBook() {
+    // Formulier uitlezen
+    let titleInvoer = document.getElementById('titleReg').value;
+    let authorInvoer = document.getElementById('authorReg').value;
+
+    let searchBook = {
+        title: titleInvoer,
+        author: authorInvoer
+    }
+
+    fetch("http://localhost:8080/book/search", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(searchBook)
+    })
+    .then(response => response.json())
+    .then(books => {show(books);
+    })
+
+    .catch(error => {
+        alert('Could not search book.');
+    });
+}
