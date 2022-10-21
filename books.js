@@ -18,10 +18,10 @@ function registerBook() {
         body: JSON.stringify(newBook)
     })
     .then(response => {
-        alert('Book registered');
+        alert('Boek is geregistreerd.');
     })
     .catch(error => {
-        alert('Could not register book. Please check input.');
+        alert('Het boek kan niet worden geregistreerd. Controleer de invoer.');
     });
 }
 
@@ -63,10 +63,10 @@ function updateBook() {
         body: JSON.stringify(newBook)
     })
     .then(response => {
-        alert('Book updated');
+        alert('Boek is geüpdated.');
     })
     .catch(error => {
-        alert('Could not update book. Please check input.');
+        alert('Het boek kan niet worden geüpdated. Controleer de invoer.');
     });
 }
 
@@ -126,10 +126,10 @@ function archiveBooks() {
         //body: JSON.stringify(changeUserInfo)
     })
     .then(response => {
-        alert('Book archived');
+        alert('Boek gearchiveerd');
     })
     .catch(error => {
-        alert('Could not archive book. Please check input.');
+        alert('Het boek kon niet worden geärchiveerd. Controleer de invoer.');
     });
 }
 
@@ -155,7 +155,7 @@ function archiveBooks() {
         show(books);
     })
     .catch(error => {
-        alert('Could not search books.');
+        alert('Het boek dat je zoekt kan niet worden gevonden.');
     });
 
 
