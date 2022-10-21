@@ -1,5 +1,0 @@
-package nl.workingtalent.book.dto;
-
-public class BookFindDataDto {
-
-}
