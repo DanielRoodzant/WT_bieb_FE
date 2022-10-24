@@ -5,78 +5,190 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Books</title>
+        <link rel="stylesheet" href="books.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+            integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <script src="books.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     </head>
     <body>
-        <h1>Books:</h1>
 
-        <table id="books"></table>
+<!--Standaardopmaak-->
+ <div class= "container-fluid">
+            <div class="row">
+              <div class="col-5" Style="color:black;font-family: Copperplate; font-size: 45px; background-color: #ffffff;" >
+               <img src="WT logo.jfif" alt="Italian Trulli" style="position:absolute; padding: 0px 20px 0px 20px; border-radius: 4px;">
+              </div>
+            </div>
+          </div>
+          <br><br><br><br><br><br><br>
+          <h2 Style="font-family:Arial, Helvetica, sans-serif bold;font-size: 50px;">&nbsp;&nbsp;&nbsp;Bibliotheek</h2>
 
-        <h1>Register book:</h1>
 
-        <form>
 
-            <label>Title</label>
-            <input type="text" name="titleReg" id="titleReg" />
+
+        <div id="header" Style="background-color: black;"class="col-12">
+            <div class="row">
+              <div class="col-10" Style="color:black;font-family: Copperplate; font-size: 10px;" >
+               dfgh
+              </div>
+            </div>
+          </div>
+          
+        <div id="header" Style="background: linear-gradient(#008200,#00e600 );"class="col-12">
+            <div class="row">
+              <div class="col-8" Style="color:#00e600;font-family: Copperplate; font-size: 4px;" >
+                &nbsp;
+              </div>
+            </div>
+          </div>
+
+<!--navbar-->
+<nav class="navbar navbar-expand-lg bg-light col-12">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" 
+      data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+      aria-controls="navbarSupportedContent" aria-expanded="false" 
+      aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" 
+            data-bs-toggle="dropdown" aria-expanded="false">
+              Menu
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="books.html">Boekenpagina</a></li>
+              <li><a class="dropdown-item" href="lent.html">Geleende boeken</a></li>
+              <li><a class="dropdown-item" href="returned.html">Historie</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="users.html">Gebruikersgegevens</a></li>
+            </ul>
+          </li>
+              </div>
+            </div>
+          </nav>
+          
+<!--Boekenpagina-->
+
+
+    <div class= "container-fluid m-0 m-md-2" style=" padding: 24px 0px 0px 20px; border-radius: 4px;">
+        <div class="row"> 
+          
+          <div class="col-12" Style="color:black;font-family: Copperplate; font-size: 14px; background-color: #c8c8c8; padding: 20px 20px 100px 20px; border-radius: 4px; height: 200px;" >
+            <div id="boventekstInvulkaderIndex">Boekenpagina</div>
             <br>
-
-            <label>Author</label>
-            <input type="text" name="authorReg" id="authorReg" />
-            <br>
-
-            <label>ISBN</label>
-            <input type="number" name="isbnReg" id="isbnReg" />
-            <br>
+            <div Style="font-family:Arial, Helvetica, sans-serif bold;font-size: 20px;">
+                Welkom op de boekenpagina van Working Talent. Op deze pagina kunt u boeken registreren, bijwerken, archiveren en opzoeken.
+            </div>
+          </div>
+        </div>
+      </div>
 
 
-            <button type="button" onclick="registerBook()">Opslaan</button>
+
+
+
+<!--Boekeninventaris-->
+        <div class= "container-fluid m-0 m-md-2" style="position:absolute; padding: 24px 20px 0px 20px; border-radius: 4px;">
+            <div class="row"> 
+                <div class="col-6"></div>
+              <div class="col-6" id="boekentabel">
+                <div id="boventekstInvulkader">Boekeninventaris:</div>
+               
+                <table id ="books" class="table table-hover"></table>
+
+               <button type="button" onclick="booksearch()" Style="font-size: 15px; float: right;border:1px solid black;width: 120px;">Boeken zoeken</button>
+               <input type="text" id ="searchbooktitle" placeholder="&nbsp;"/>
+              </div>
+            </div>
+          </div>
+       
+<!--Boeken registreren-->
+ <form>
+<br>
+            <div class= "container-fluid m-0 m-md-2 ">
+                <div class="row">
+                  <div class="col-6" id="kolom">
+                   <div id="boventekstInvulkader">Boek registeren:</div>
+                
+                   <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"></span>
+                        <input type="text" name="titleReg" id="titleReg" class="form-control" 
+                        placeholder="Boektitel" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1" ></span>
+                        <input type="text" name="authorReg" id="authorReg" class="form-control" 
+                        placeholder="Auteur" aria-label="Username" aria-describedby="basic-addon1">
+                      </div>
+
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"></span>
+                        <input type="number" name="isbnReg" id="isbnReg" class="form-control" 
+                        placeholder="ISBN-nummer" aria-label="Username" aria-describedby="basic-addon1"
+                        >
+                      </div>
+                      <button type="button" id="algemeneButton" onclick="registerBook()">Opslaan</button>
+
+
+                <!--Boeken registreren-->
+                <br>
+
+                      <div id="boventekstInvulkader">Boek bijwerken:</div>
+
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"></span>
+                        <input type="number" name="bookIdUpd" id="bookIdUpd" class="form-control" 
+                        placeholder="Book ID" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"></span>
+                        <input type="text" name="titleUpd" id="titleUpd" class="form-control" 
+                        placeholder="Titel" aria-label="Username" aria-describedby="basic-addon1">
+                      </div>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"></span>
+                        <input type="text" name="authorUpd" id="authorUpd" class="form-control" 
+                        placeholder="Auteur" aria-label="Username" aria-describedby="basic-addon1">
+                      </div>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"></span>
+                        <input type="number" name="isbnUpd" id="isbnUpd" class="form-control" 
+                        placeholder="ISBN-nummer" aria-label="Username" aria-describedby="basic-addon1">
+                      </div>
+                      <button type="button" id="algemeneButton" onclick="updateBook()">Opslaan</button>
+
+                      <!--Boeken archiveren-->
+                      <br>
+                      <div id="boventekstInvulkader" >Boek archiveren:</div>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"></span>
+                        <input type="number" name="bookIdArch" id="bookIdArch" class="form-control" 
+                        placeholder="Book ID" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                      <button type="button" id="algemeneButton" onclick="archiveBooks()">Archiveren</button>
+                  </div>                  
+                </div>
+              </div>
+
 
         </form>
-
-        <h1>Update book:</h1>
-
-        <form>
-
-            <label>Book ID</label>
-            <input type="text" name="bookIdUpd" id="bookIdUpd" />
-            <br>
-
-            <label>Title</label>
-            <input type="text" name="titleUpd" id="titleUpd" />
-            <br>
-
-            <label>Author</label>
-            <input type="text" name="authorUpd" id="authorUpd" />
-            <br>
-
-            <label>ISBN</label>
-            <input type="number" name="isbnUpd" id="isbnUpd" />
-            <br>
+    
 
 
-            <button type="button" onclick="updateBook()">Opslaan</button>
-
-        </form>
-
-        <h1>Archive book:</h1>
-        <form>
-
-            <label>Book ID</label>
-            <input type="text" name="bookIdArch" id="bookIdArch" />
-            <br>
-
-          <!--  <label>Check to archive, leave unchecked to unarchive</label>
-            <input type="checkbox" name="archiveBook" id="archiveBook" />
-            <br> -->
-
-            <button type="button" onclick="archiveBooks()">Archiveren</button>
-
-        </form>
-
-
-
-     <script src="books.js"></script>
-
-
+     
+        
 
 
     </body>

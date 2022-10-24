@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="reservation.js"></script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Reservations</title>
+    </head>
+    <body>
+        <h1>Reservations:</h1>
+
+        <table id="reservation"></table>
+
+        <h1>Post Reservation:</h1>
+
+        <form>
+
+            <label>user id</label>
+            <input type="text" name="userIdReg" id="userIdReg" />
+            <br>
+
+            <label>book id</label>
+            <input type="text" name="bookIdReg" id="bookIdReg" />
+            <br>
+
+
+            <button type="button" onclick="registerReservation()">Opslaan</button>
+
+        </form>
+
+        <h1>Delete reservation:</h1>
+        <form>
+
+            <label>Reservation ID</label>
+            <input type="text" name="resIdDel" id="resIdDel" />
+            <br>
+
+
+            <button type="button" onclick="deleteReservation()">Reservering annuleren</button>
+
+        </form>
+    </body>
+</html>
