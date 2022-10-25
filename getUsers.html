@@ -14,7 +14,7 @@
             .right {
                 padding: 20px;
                 float: left;
-                width: 40%;
+                width: 60%;
             }
         </style>
         <title>Zoek user</title>
@@ -26,7 +26,7 @@
             <label>User id</label>
             <input type="text" name="userIdGet" id="userIdGet" />
 
-            <button type="button" onclick="getUserData(), getLentData()">Zoek</button>
+            <button type="button" onclick="getBookData(), getReservationData(), getLentData(), getReturnedData()">Zoek</button>
         </form>
         <br>
 
@@ -52,9 +52,20 @@
             <p id="admin"></p>
         </section>
 
+        <section>
+        <h2>Gereserveerde boeken:</h2>
+
+        <table id="reservations"></table>
+
         <h2>Boeken in bezit:</h2>
 
         <table id="lents"></table>
+
+        <h2>Eerder geleende boeken:</h2>
+
+        <table id="returneds"></table>
+        </section>
+        <br> <br>
 
     </body>
 </html>
