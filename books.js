@@ -1,3 +1,15 @@
+function userAuth(){
+    fetch("http://localhost:8080/book/status", {
+        method: 'GET'
+    })
+    .then(response => {
+        alert('Logged in succesfully.');
+    })
+    .catch(error => {
+        alert('Incorrect credentials, please try again.');
+    });
+}
+
 function registerBook() {
     // Formulier uitlezen
     let titleInvoer = document.getElementById('titleReg').value;
