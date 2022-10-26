@@ -1,0 +1,122 @@
+
+
+#basic-addon1 {
+    background-color: #008200; 
+    border:1px solid black;
+}
+
+#kolom {
+    color:black;
+    font-family: Copperplate; 
+    font-size: 60px; 
+    background-color: white;
+    padding: 20px 20px 20px 20px;
+    border-radius: 4px; 
+    /*height:2000px;*/
+}
+
+#boekentabel {
+    color:black;
+    font-family: Copperplate; 
+    font-size: 14px; 
+    background-color: white; 
+    padding: 20px 20px 1000px 20px; 
+    border-radius: 4px; 
+    /*height: 2000px;*/
+}
+
+#firstNameReg,#lastNameReg,#emailReg,
+#passwordReg,#adminReg,#userIdCha,
+#firstNameCha,#lastNameCha,#emailCha,
+#passwordCha,#userIdDel,
+
+#userIdGet,
+
+#titleReg,#authorReg,#isbnReg,
+#bookIdUpd,#titleUpd,#authorUpd
+#isbnUpd,#bookIdArch,
+
+#bookIdGet,
+
+#LentIdReg,#UserIdReg,#bookIdReg,
+#dateReg,#lentIdUpd,#userIdUpd,
+#copyIdUpd,#dateUpd,
+
+#ReturnedIdReg,#UserIdReg,#bookIdReg,
+#copyReg,#dateReg,#ReturnedIdUpd,
+#titleUpd,#authorUpd,#isbnUpd,
+#ReturnedIdArch,
+
+#userIdReg,#bookIdReg,#resIdDel,
+
+#userIdReg,#bookIdReg,#copyIdDel,
+
+#nameReg,#bookLabelIdUpd,#nameUpd,
+#bookLabelIdDel{
+    background-color: white; 
+    border:1px solid black;
+}
+
+#boventekstInvulkader {
+    font-family:Arial, Helvetica, sans-serif bold;
+    font-size: 45px;
+}
+
+#boventekstInvulkaderIndex {
+    font-family:Arial, Helvetica, sans-serif bold;
+    font-size: 45px;
+}
+
+#algemeneButton {
+    border:1px solid black;
+    font-size: 15px; 
+    float: right; 
+    width: 100px;
+
+}
+
+#books {
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 14px;
+}
+
+#persoonlijkeGegevens {
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 20px;
+}
+
+#searchbooktitle {
+    float: right; 
+    border:1px solid black;
+    width: 350px;
+}
+
+#tabel {
+    border-radius: 4px; 
+    margin: 10px, 10px, 10px, 10px;
+    position:absolute;
+    padding: 24px 20px 0px 20px;
+}
+
+#labelAdmin {
+    color:black;
+    font-family: Copperplate; 
+    font-size: 15px; 
+}
+
+#sectieGegevens{
+    color:black;
+    font-family: Copperplate; 
+    font-size: 15px; 
+}
+
+#sectieGegevensIngevuld{
+    color:black;
+    font-family: Copperplate; 
+    font-size: 15px; 
+    float:right;
+}
+
+#dropdownStyle {
+
+}

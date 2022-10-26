@@ -1,43 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <script src="copy.js"></script>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Copies</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <title>BookLabels</title>
     </head>
     <body>
-        <h1>Copies:</h1>
 
-        <table id="copy"></table>
-
-        <h1>Make Copy:</h1>
-
-        <form>
-
-            <label>book id</label>
-            <input type="text" name="userIdReg" id="userIdReg" />
-            <br>
-
-            <label>copy Nr</label>
-            <input type="text" name="bookIdReg" id="bookIdReg" />
-            <br>
+        <div class= "container-fluid">
+            <div class="row">
+              <div class="col-5" Style="color:black;font-family: Copperplate; font-size: 45px; background-color: #ffffff;" >
+               <img src="WT logo.jfif" alt="Italian Trulli" style="position:absolute; padding: 0px 20px 0px 20px; border-radius: 4px;">
+               
+              </div>
+            </div>
+          </div>
+          <br><br><br><br><br><br><br>
+          <h2 Style="font-family:Arial, Helvetica, sans-serif bold;font-size: 50px;">&nbsp;&nbsp;&nbsp;Bibliotheek</h2>
 
 
-            <button type="button" onclick="registerCopy()">Opslaan</button>
-
-        </form>
-
-        <h1>Delete copy:</h1>
-        <form>
-
-            <label>Copy ID</label>
-            <input type="text" name="copyIdDel" id="copyIdDel" />
-            <br>
 
 
-            <button type="button" onclick="deleteCopy()">Copie annuleren</button>
+        <div id="header" Style="background-color: black;"class="col-12">
+            <div class="row">
+              <div class="col-10" Style="color:black;font-family: Copperplate; font-size: 10px;" >
+               dfgh
+              </div>
+            </div>
+          </div>
 
-        </form>
+          
+        <div id="header" Style="background: linear-gradient(#008200,#00e600 );"class="col-12">
+            <div class="row">
+              <div class="col-8" Style="color:#00e600;font-family: Copperplate; font-size: 4px;" >
+                &nbsp;
+              </div>
+            </div>
+          </div>
+
+          
+<!--navbar-->
+<nav class="navbar navbar-expand-lg bg-light col-12">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Menu
+          </a>
+          <ul class="dropdown-menu" id="dropdownStyle">
+            <li><a class="dropdown-item" href="users.html">Gebruikers registreren</a></li>
+            <li><a class="dropdown-item" href="getUsers.html">Gebruikersoverzicht</a></li>
+            <li><a class="dropdown-item" href="books.html">Boeken registreren</a></li>
+            <li><a class="dropdown-item" href="getBooks.html">Boekenoverzicht</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="lent.html">Geleende boeken</a></li>
+           <li><a class="dropdown-item" href="returned.html">Teruggebrachte boeken</a></li>
+          <li><a class="dropdown-item" href="reservation.html">Reserveringen</a></li>
+          <li><a class="dropdown-item" href="copy.html">Boekexemplaargegevens</a></li>
+          <li><a class="dropdown-item" href="bookLabels.html">Boeklabels</a></li>
+
+          </ul>
+        </li>
+    </div>
+  </div>
+</nav>
+
+          <!--Boekexemplaren-->
+          <div class= "container-fluid m-0 m-md-2" style=" padding: 24px 0px 0px 20px; border-radius: 4px;">
+            <div class="row"> 
+              
+              <div class="col-12" Style="color:black;font-family: Copperplate; font-size: 14px; background-color: #c8c8c8; padding: 20px 20px 100px 20px; border-radius: 4px; height: 200px;" >
+                <div id="boventekstInvulkaderIndex">Boekexemplaren</div>
+                <br>
+                <div Style="font-family:Arial, Helvetica, sans-serif bold;font-size: 20px;">
+                    Hier kunt u als admin Boekexemplaren beheren.
+              </div>
+            </div>
+          </div>
+          <br>
+    
+    
+    
+          <!--Boekexemplaren:-->
+     <form>
+        <br>
+        
+                    <div class= "container-fluid m-0 m-md-2 ">
+                        <div class="row">
+                          <div class="col-6" id="kolom">
+                           
+                            <!--Boekexemplaar registreren:-->
+                           <div id="boventekstInvulkader">Boekexemplaren registreren:</div>
+                           <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1"></span>
+                                <input type="text" name="userIdReg" id="userIdReg" class="form-control" 
+                                placeholder="Voer een copy-Id in" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1"></span>
+                                <input type="text" name="bookIdReg" id="bookIdReg" class="form-control" 
+                                placeholder="Voer een boek-Id in" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                              <button type="button" id="algemeneButton" onclick="registerCopy()">Opslaan</button>
+                             <br>
+                            <!--Boekexemplaar verwijderen:-->
+                            <div id="boventekstInvulkader">Boekexemplaren verwijderen:</div>
+                           
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1"></span>
+                                <input type="text" name="copyIdDel" id="copyIdDel" class="form-control" 
+                                placeholder="Voer een copy-Id in" aria-label="Username" aria-describedby="basic-addon1">
+                            </div> 
+                              <button type="button" id="algemeneButton" onclick="deleteCopy()" Style="width:200px;">Exemplaar verwijderen</button>
+                           <br>
+                        </div> 
+                            <!--Huidige exemplaren-->
+                           <div class="col-6" id="boekentabel">
+                             <div id="boventekstInvulkader">Huidige exemplaren:</div>
+                             <table id="copy" class="table table-hover"></table>
+             
+                           </div>
+                         </div>
+                       </div>
+                      </div>
+                   </div>
+         
+                 </form>
+
+
+        <script src="copy.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" 
+                        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     </body>
 </html>
