@@ -5,7 +5,7 @@ function registerCopy() {
     //let Invoer = document.getElementById('isbnReg').value;
 
     let newCopy = {
-        bookId: bookIdInvoer,
+        book: { bookId: bookIdInvoer},
         copyNr: copyNrInvoer
     }
 
@@ -45,7 +45,8 @@ function show(data) {
     let copyTableHtml =
         `<tr>
                 <th>Id</th>
-                <th>book id</th>
+                <th>book</th>
+                <th>title</th>
                 <th>copy Nr</th>
              </tr>`;
 
@@ -53,7 +54,8 @@ function show(data) {
     for (let r of data) {
         copyTableHtml += `<tr> 
                 <td>${r.copyId} </td>
-                <td>${r.bookId}</td>
+                <td>${r.book.bookId}</td>
+                <td>${r.book.title}</td>
                 <td>${r.copyNr}</td>
             </tr>`;
     }

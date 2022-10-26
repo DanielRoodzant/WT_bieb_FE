@@ -52,7 +52,9 @@
 #userIdReg,#bookIdReg,#copyIdDel,
 
 #nameReg,#bookLabelIdUpd,#nameUpd,
-#bookLabelIdDel{
+#bookLabelIdDel,
+
+#copyNrReg{
     background-color: white; 
     border:1px solid black;
 }
