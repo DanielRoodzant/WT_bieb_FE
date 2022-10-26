@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="getBooks.js"></script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            .left {
+                padding: 20px;
+                float: left;
+                width: 20%;
+            }
+
+            .right {
+                padding: 20px;
+                float: left;
+                width: 65%;
+            }
+
+        </style>
+
+
+
+        <title>Zoek boek</title>
+    </head>
+    <body>
+        <h1>Zoek boek:</h1>
+
+        <form>
+            <label>Boek id</label>
+            <input type="text" name="bookIdGet" id="bookIdGet" />
+
+            <button type="button" onclick="getBookData(), getReservationData(), getLentData(), getReturnedData()">Zoek</button>
+        </form>
+        <br>
+
+        <h2> Gegevens:</h2>
+
+        <section class="left">
+            <p><b>Titel:</b></p>
+
+            <p><b>Auteur:</b></p>
+
+            <p><b>ISBN Nummer:</b></p>
+
+            <p><b>Is het boek gearchiveerd?</b></p>
+
+        </section>
+        <section class="right">
+            <p id="title" ></p>
+            <p id="author"></p>
+            <p id="isbn"></p>
+            <p id="archived"></p>
+        </section>
+
+
+        <section>
+        <h2>Gereserveerd door:</h2>
+
+        <table id="reservations"></table>
+
+        <h2>Boeken in bezit van:</h2>
+
+        <table id="lents"></table>
+
+        <h2>Boek eerder geleend door Users:</h2>
+
+        <table id="returns"></table>
+        </section>
+        <br> <br>
+
+    </body>
+</html>
