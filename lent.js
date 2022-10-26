@@ -110,4 +110,3 @@ function getapi() {
 }
 
 getapi();
-}

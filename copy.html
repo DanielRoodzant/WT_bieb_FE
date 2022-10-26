@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="copy.js"></script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Copies</title>
+    </head>
+    <body>
+        <h1>Copies:</h1>
+
+        <table id="copy"></table>
+
+        <h1>Make Copy:</h1>
+
+        <form>
+
+            <label>book id</label>
+            <input type="text" name="userIdReg" id="userIdReg" />
+            <br>
+
+            <label>copy Nr</label>
+            <input type="text" name="bookIdReg" id="bookIdReg" />
+            <br>
+
+
+            <button type="button" onclick="registerCopy()">Opslaan</button>
+
+        </form>
+
+        <h1>Delete copy:</h1>
+        <form>
+
+            <label>Copy ID</label>
+            <input type="text" name="copyIdDel" id="copyIdDel" />
+            <br>
+
+
+            <button type="button" onclick="deleteCopy()">Copie annuleren</button>
+
+        </form>
+    </body>
+</html>
