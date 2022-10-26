@@ -128,4 +128,3 @@ function getReturnedData() {
                 // handle the error
             });
     }
-
